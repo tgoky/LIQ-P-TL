@@ -3,12 +3,12 @@ import { request, gql } from 'graphql-request';
 // Example query to fetch liquidity pool data
 const query = gql`
   {
-    pools(first: 5) {
-      id
-      liquidity
-      volumeUSD
-      feeTier
-    }
+   pools(first: 20, orderBy: volumeUSD, orderDirection: desc) {
+    id
+    liquidity
+    volumeUSD
+    feeTier
+  }
   }
 `;
 
